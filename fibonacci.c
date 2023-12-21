@@ -8,6 +8,7 @@ int main()
 int a;
 printf("Enter a");
 scanf("%d",&a);
-printf("Fibonacci no. of 'a'th position is %d",fibo(a));
-return 0;
-}
+for(int i=1;i<=a;i++)
+{
+printf("Fibonacci no. of '%d'th position is %d\n",i,fibo(i));
+}}

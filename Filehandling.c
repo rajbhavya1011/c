@@ -11,9 +11,9 @@ PwD present directory
 ls list */
 #include <stdio.h>
 #include <stdlib.h>
-void main()
+int main()
 {
-    FILE* fp;
+   /* FILE* fp;
     fp=fopen("test.txt", "r+");
     fp=fopen("test.txt", "a");
     if(fp == NULL)
@@ -24,10 +24,26 @@ void main()
     fputs("Hello",fp);
     fp = fopen("test2.txt", "a");
     fputs("My name is Bhavya Raj",fp);
-    fclose(fp);
+    fclose(fp);*/
 /*create a text file using a c program and wirte the following data:-
 1. one line about youself
 2. write the struct data to file
-3. append file data with file checksum
+3. append file data with file CheckSum(Error in content -integrity)
 4. append table of numbers in the file from 2-50.*/
+FILE *fp;
+char c; int n=0; 
+fp = fopen("test.txt","r");
+if(fp==NULL)
+{
+    printf("File not found");
+}
+while((c=fgetc(fp))!=EOF)
+{
+    putchar(c);
+    n++;
+}
+fclose(fp);
+printf(n);
+return 0;
+
 }
